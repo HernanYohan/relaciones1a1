@@ -10,16 +10,25 @@ import java.util.List;
 import javax.ejb.Local;
 
 /**
- *
+ *interface
  * @author Hernan
  */
 @Local
 public interface CuentaFacadeLocal {
-
+/**
+ * metodos para agragr a la bd
+ * @param cuenta 
+ */
     void create(Cuenta cuenta);
-
+/**
+ * metodos para editar la bd
+ * @param cuenta 
+ */
     void edit(Cuenta cuenta);
-
+/**
+ * metodos para eliminar a la bd
+ * @param cuenta 
+ */
     void remove(Cuenta cuenta);
 
     Cuenta find(Object id);

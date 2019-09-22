@@ -22,17 +22,27 @@ import javax.persistence.PersistenceContext;
 public class InversorFacade extends AbstractFacade<Inversor> implements InversorFacadeLocal {
     @PersistenceContext(unitName = "persistence")
     private EntityManager em;
-
+/**
+ * metodos abstrac
+ * 
+ * @return 
+ */
     @Override
     protected EntityManager getEntityManager() {
         return em;
     }
-
+/**
+ * Constructor de la clase
+ */
     public InversorFacade() {
         super(Inversor.class);
     }
     
-    
+    /**
+     * metodo creado para guardar con relacion uno a uno 
+     * @param inversordto
+     * @param cuentadto 
+     */
     public void nuevoInversor(InversorDTO inversordto,CuentaDTO cuentadto){
     Inversor inversor = new Inversor();
     inversor.setNombre(inversordto.getNombre());

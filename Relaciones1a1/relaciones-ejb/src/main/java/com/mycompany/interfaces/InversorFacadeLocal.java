@@ -18,10 +18,17 @@ import javax.ejb.Local;
 @Local
 public interface InversorFacadeLocal {
 
+ /**
+ * metodos para agragr a la bd
+ */
     void create(Inversor inversor);
-
+ /**
+ * metodos para editar a la bd
+ */
     void edit(Inversor inversor);
-
+ /**
+ * metodos para remover a la bd
+ */
     void remove(Inversor inversor);
 
     Inversor find(Object id);
@@ -30,6 +37,11 @@ public interface InversorFacadeLocal {
 
     List<Inversor> findRange(int[] range);
     
+    /**
+     * funcion para agregar 
+     * @param inversordto
+     * @param cuentadto 
+     */
        public void nuevoInversor(InversorDTO inversordto,CuentaDTO cuentadto);
 
     int count();

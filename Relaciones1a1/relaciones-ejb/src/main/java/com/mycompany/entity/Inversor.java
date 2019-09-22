@@ -29,33 +29,55 @@ public class Inversor implements Serializable{
     private int id;
     @Column
     private String nombre;
-    
+    /**
+     * reacion one to one
+     */
     @OneToOne(mappedBy = "inversorId",cascade = CascadeType.ALL,fetch = FetchType.LAZY,optional = false)
      private Cuenta cuenta;
-
+/**
+ * constructor vacio
+ */
     public Inversor() {
     }
-
+/**
+ * metodo que vueve publica la variable
+ * @return 
+ */
     public int getId() {
         return id;
     }
-
+/**
+ * metodo que vueve publica la variable
+ * @return 
+ */
     public void setId(int id) {
         this.id = id;
     }
-
+/**
+ * metodo que vueve publica la variable
+ * @return 
+ */
     public String getNombre() {
         return nombre;
     }
-
+/**
+ * metodo que vueve publica la variable
+ * @return 
+ */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+/**
+ * metodo que vueve publica la variable
+ * @return 
+ */
     public Cuenta getCuenta() {
         return cuenta;
     }
-
+/**
+ * metodo que vueve publica la variable
+ * @return 
+ */
     public void setCuenta(Cuenta cuenta) {
         this.cuenta = cuenta;
     }
