@@ -14,6 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -23,6 +25,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "inversor")
+@NamedQueries({
+    @NamedQuery(name = "consultaJoin", query="SELECT inv FROM Inversor inv JOIN  INV.cuenta cu WHERE INV.nombre = :nombre AND cu.numeroCuenta = :cuenta")
+})
 public class Inversor implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

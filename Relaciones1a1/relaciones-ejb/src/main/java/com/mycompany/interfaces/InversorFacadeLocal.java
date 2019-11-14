@@ -43,6 +43,8 @@ public interface InversorFacadeLocal {
      * @param cuentadto 
      */
        public void nuevoInversor(InversorDTO inversordto,CuentaDTO cuentadto);
+       
+       public List<Inversor> consultaInversor(String nombre, String cuenta);
 
     int count();
     
